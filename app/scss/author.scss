@@ -1,0 +1,190 @@
+@import 'vars';
+@import 'fonts';
+@import 'libs';
+
+.author{
+    background-color: #ECEEEF;
+    padding: 90px 0;
+    &__list{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__avatar{
+        width: 250px;
+        height: 250px;
+        border: 7px solid $accent;
+        border-radius: 50%;
+        img{
+            max-width: 100%;
+            border-radius: 50%;
+            width: 100%;
+        }
+    }
+    &__descr{
+        max-width: 75%;
+    }
+    &__name{
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 58px;
+        letter-spacing: 0.03em;
+        margin-bottom: 24px;
+        color: $title;
+    }
+    &__links{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    &__link{
+        margin: 0 5px;
+        transition: all .3s ease;
+        svg{
+            transition: all .3s ease-in-out;
+        }
+        &:hover{
+            svg{
+                fill: darken($accent, 10%)
+            }
+        }
+    }
+    &__text{
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 38px;
+        letter-spacing: 0.03em;
+        color: $text;
+        a{
+            color: $accent;
+            font-weight: 600;
+        }
+    }
+}
+
+
+.guides {
+    padding: 50px 0;
+    .inner {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__section_title{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 40px;
+    }
+    &__link{
+        border: 1.2393px solid #F73E42;
+        box-sizing: border-box;
+        filter: drop-shadow(4.95718px 4.95718px 11.1537px rgba(247, 62, 66, 0.3));
+        border-radius: 9.08817px;
+        padding: 10px 17px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        transition: all .3s ease-in-out;
+        text-decoration: none;
+        color: $accent;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: 600;
+        svg{
+            margin-left: 9px;
+            transition: all .3s ease-in-out;
+        }
+        &:hover{
+            background-color: $accent;
+            color: #fff;
+            text-decoration: none;
+            svg{
+                fill: #fff;
+            }
+        }
+    }
+    &__icon {
+      margin-bottom: 25px;
+    }
+    &__title {
+      font-weight: bold;
+      font-size: 37px;
+      line-height: 45px;
+      text-transform: uppercase;
+      color: $title;
+      margin-bottom: 0;
+      margin-right: 30px;
+    }
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 30px;
+      width: 100%;
+    }
+    &__item {
+      img {
+        filter: drop-shadow(0px 31px 31px rgba(0, 0, 0, 0.06)),
+          drop-shadow(0px 15.6938px 13.5141px rgba(0, 0, 0, 0.0405)),
+          drop-shadow(0px 6.2px 5.0375px rgba(0, 0, 0, 0.03)),
+          drop-shadow(0px 1.35625px 1.79219px rgba(0, 0, 0, 0.0195));
+        border-radius: 8px;
+        margin-bottom: 30px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        max-width: 100%;
+      }
+      width: 100%;
+    }
+    &__thumb{
+        position: relative;
+    }
+    &__category{
+        position: absolute;
+        top: 25px;
+        right: -10px;
+        display: inline-block;
+        background-color: $accent;
+        color: #fff;
+        text-transform: uppercase;
+        box-shadow: 0px 2.8394px 2.8394px rgba(0, 0, 0, 0.1);
+        border-radius: 5.92033px;
+        padding: 4px 20px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    &__item_title {
+      font-weight: 500;
+      font-size: 21px;
+      line-height: 29px;
+      color: $title;
+      display: block;
+      margin-bottom: 15px;
+      transition: all .3s ease-in-out;
+      text-decoration: none;
+      &:hover{
+          color: $accent;
+          text-decoration: none;
+      }
+    }
+    &__item_date{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #545454;
+        display: block;
+        margin-bottom: 15px;
+    }
+    &__item_text {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 29px;
+      color: $text;
+    }
+  }
+
+@import 'media'; // Always at the end
