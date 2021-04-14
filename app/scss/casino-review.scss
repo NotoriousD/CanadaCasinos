@@ -8,6 +8,13 @@
   flex-direction: row;
   align-items: stretch;
   justify-content: space-between;
+  @media (max-width: 1000px) {
+    padding: 60px 0;
+    flex-direction: column;
+  }
+  @media (max-width: 480px) {
+    padding: 40px 0;
+  }
 }
 
 .brand {
@@ -21,6 +28,13 @@
     position: sticky;
     left: 0;
     top: 0;
+  }
+  &__col-first,
+  &__col-second,
+  &__col-third{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   &__logo {
     margin-bottom: 19px;
@@ -128,6 +142,38 @@
     text-align: center;
     color: $text;
   }
+  @media (max-width: 1000px) {
+    max-width: 100%;
+    margin-bottom: 15px;
+    &__container{
+      position: static;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    &__col-first{
+      width: 50%;
+    }
+    &__col-second{
+      width: 50%;
+    }
+    &__descr{
+      margin-bottom: 5px;
+    }
+  }
+  @media (max-width: 480px) {
+    &__title{
+      font-size: 30px;
+    }
+    &__col-first{
+      width: 100%;
+    }
+    &__col-second{
+      width: 100%;
+    }
+    &__descr{
+      margin-bottom: 5px;
+    }
+  }
 }
 
 .review {
@@ -219,6 +265,35 @@
     letter-spacing: 0.03em;
     margin-bottom: 0;
   }
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
+  @media (max-width: 700px) {
+    &__top_text{
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 15px;
+    }
+    &__adv_col{
+      padding: 15px;
+    }
+    h2{
+      font-size: 28px;
+      line-height: 34px;
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+    p{
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+  @media (max-width: 550px){
+    &__adv{
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+    }
+  } 
 }
 
 body .wp-block-image {
@@ -376,6 +451,51 @@ body .wp-block-image {
       margin-left: 3px;
     }
   }
+  @media (max-width: 700px) {
+    padding: 15px;
+    &__title{
+      font-size: 28px;
+      line-height: 32px;
+      margin-bottom: 15px;
+    }
+    &__descr{
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &__block{
+      margin: 10px 0;
+    }
+    &__rating{
+      grid-template-columns: repeat(2, 1fr);
+      text-align: center;
+    }
+  }
+  @media (max-width: 550px){
+    &__descr{
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+    }
+    &__block{
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    &__info{
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  @media (max-width: 480px){
+    &__rating{
+      grid-template-columns: 1fr;
+    }
+    &__item{
+      text-align: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+  } 
 }
 
 .details {
@@ -431,6 +551,29 @@ body .wp-block-image {
     &:hover {
       color: #fff;
       background-color: $accent;
+    }
+  }
+  @media (max-width: 600px) {
+    &__title{
+      font-size: 28px;
+      line-height: 34px;
+      margin-bottom: 15px;
+    }
+    &__block_title{
+      width: 25%;
+    }
+    &__block_content{
+      width: 70%;
+    }
+  }
+  @media (max-width: 480px){
+    padding-bottom: 0;
+    &__block_title{
+      font-size: 15px;
+    }
+    &__item{
+      padding: 5px 10px;
+      font-size: 12px;
     }
   }
 }
@@ -591,6 +734,65 @@ body .wp-block-image {
       color: #ffffff;
       text-decoration: none;
       border-color: $accent;
+    }
+  }
+  @media (max-width: 1200px) {
+    &__icon {
+      margin-bottom: 15px;
+    }
+    &__list {
+      grid-gap: 24px;
+      margin-bottom: 35px;
+    }
+    &__title {
+      font-size: 28px;
+      line-height: 36px;
+    }
+    &__descr {
+      font-size: 15px;
+      line-height: 22px;
+      margin-bottom: 35px;
+    }
+    &__item_title {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    &__item_text {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  @media (max-width: 850px) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 550px) {
+    &__list {
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
+    &__item {
+      width: 100%;
+    }
+  }
+  @media (max-width: 480px) {
+    padding: 30px 0;
+    &__icon {
+      margin-bottom: 10px;
+    }
+    &__title {
+      font-size: 20px;
+      line-height: 27px;
+      margin-bottom: 10px;
+    }
+    &__descr {
+      font-size: 12px;
+      line-height: 21px;
+      margin-bottom: 25px;
+    }
+    &__item {
+      padding: 10px;
     }
   }
 }
