@@ -58,6 +58,7 @@
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
     transition: all 0.3s ease-in-out;
+    text-align: center;
     &:last-child {
       border-right: 0;
     }
@@ -83,6 +84,7 @@
     }
     &__link {
       font-size: 16px;
+      line-height: 20px;
     }
   }
   @media (max-width: 550px){
@@ -100,6 +102,7 @@
     }
     &__link{
       font-size: 12px;
+      line-height: 16px;
       padding: 5px 10px;
     }
     &__links{
