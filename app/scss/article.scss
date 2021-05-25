@@ -116,7 +116,7 @@
   }
   p {
     font-weight: normal;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 29px;
     letter-spacing: 0.03em;
     color: $title;
@@ -544,9 +544,11 @@
   &__item_date {
     margin-right: 25px;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 16px;
     color: #545454;
+    display: block;
+    margin-bottom: 5px;
   }
   &__item_author {
     font-weight: normal;
@@ -566,9 +568,10 @@
   }
   &__item_text {
     font-weight: normal;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 25px;
     color: $text;
+    display: block;
   }
   &__links {
     max-width: 200px;

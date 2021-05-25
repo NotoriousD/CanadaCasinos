@@ -5,8 +5,9 @@
 .banner {
   background-repeat: no-repeat;
   background-position: center center;
-  padding-top: 100px;
-  padding-bottom: 145px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-size: cover;
   &__container {
     display: flex;
     flex-direction: column;
@@ -16,8 +17,8 @@
   }
   &__title {
     font-weight: 900;
-    font-size: 38px;
-    line-height: 51px;
+    font-size: 36px;
+    line-height: 45px;
     text-align: center;
     text-transform: uppercase;
     color: #323232;
@@ -26,16 +27,16 @@
       text-align: center;
       color: transparent;
       background-color: #ce0314;
-      font-size: 66px;
-      line-height: 89px;
+      font-size: 60px;
+      line-height: 65px;
       text-shadow: 2px 4px 4px rgba(255, 255, 255, 0.2);
       background-clip: text;
     }
   }
   &__descr {
     font-weight: 300;
-    font-size: 33px;
-    line-height: 39px;
+    font-size: 30px;
+    line-height: 37px;
     text-align: center;
     color: #323232;
     padding-bottom: 20px;
@@ -52,10 +53,10 @@
       position: absolute;
     }
   }
-  &__text {
+  p {
     font-weight: normal;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 20px;
     text-align: center;
     color: #7e7e7e;
     display: block;
@@ -64,8 +65,13 @@
   form {
     width: 100%;
   }
-  &__field {
+  .form__field {
     position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
     input {
       width: 100%;
       background: #ffffff;
@@ -74,9 +80,15 @@
         0px 0px 7.99242px rgba(0, 0, 0, 0.0274815),
         0px 0px 3.85998px rgba(0, 0, 0, 0.0168519);
       border-radius: 11px;
-      height: 65px;
-      padding-left: 65px;
+      height: 45px;
+      padding-left: 20px;
       border: 0;
+    }
+    label {
+      text-align: center;
+      display: flex;
+      width: 100%;
+      justify-content: center;
     }
     button {
       position: absolute;
@@ -97,6 +109,27 @@
         svg {
           fill: $accent;
         }
+      }
+    }
+  }
+  .form__submit{
+    input{
+      height: 40px;
+    }
+  }
+  .tc_pp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    a{
+      color: $accent;
+      font-size: 16px;
+      text-decoration: none;
+      transition: all .3s ease;
+      &:hover{
+        color: darken($accent, 10%);
       }
     }
   }
@@ -226,7 +259,7 @@
   }
   &__descr {
     font-weight: normal;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 25px;
     text-align: center;
     color: $text;
@@ -266,7 +299,7 @@
   }
   &__item_title {
     font-weight: 500;
-    font-size: 17px;
+    font-size: 18px;
     line-height: 33px;
     text-align: center;
     letter-spacing: 0.03em;
@@ -302,7 +335,7 @@
       line-height: 24px;
     }
     &__item_text {
-      font-size: 14px;
+      font-size: 16px;
       line-height: 20px;
     }
   }
@@ -317,7 +350,7 @@
       margin-bottom: 10px;
     }
     &__descr {
-      font-size: 12px;
+      font-size: 16px;
       line-height: 21px;
       margin-bottom: 25px;
     }
@@ -370,7 +403,7 @@
   }
   &__descr {
     font-weight: normal;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 25px;
     text-align: center;
     color: $text;
@@ -430,8 +463,8 @@
   }
   &__text {
     margin-bottom: 12px;
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 20px;
     color: $text;
     width: 100%;
   }
@@ -446,7 +479,7 @@
     padding: 6px 0;
     border-radius: 6px;
     color: #ffffff;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 21px;
     text-decoration: none;
     text-align: center;
@@ -483,7 +516,8 @@
   &__links {
     max-width: 380px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    justify-content: center;
     grid-gap: 32px;
   }
   &__link {
@@ -826,8 +860,8 @@
     display: none;
     p {
       font-weight: normal;
-      font-size: 14px;
-      line-height: 20px;
+      font-size: 16px;
+      line-height: 22px;
       color: $text;
     }
   }

@@ -15,6 +15,15 @@ $(function () {
       .slideUp(300);
   });
 
+  $('.details__title').on('click', function () {
+    $(this).toggleClass('active');
+    $('.details__content').slideToggle(400);
+  });
+
+  $('#disabled-link').on('click', e => e.preventDefault());
+
+  $('.details__title').click();
+
   const archiveSlider = $('.banner__slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
